@@ -1,0 +1,16 @@
+.root {
+    width: 300px;
+    min-width: 300px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+
+    div {
+        margin-top: 15px;
+        margin-right: 12px;
+    }
+}

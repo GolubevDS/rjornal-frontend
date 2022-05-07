@@ -1,0 +1,36 @@
+.root {
+    padding: 20px;
+    padding-bottom: 0;
+    margin-bottom: 30px;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+}
+
+.fullName {
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.tabs {
+    margin-top: 20px;
+}
+
+.setting {
+    height: 40px;
+    min-width: 45px;
+    width: 45px;
+    margin-right: 10px;
+}
+
+.stats {
+    margin: 10px 0;
+
+    &:first-child {
+        font-weight: 700;
+        color: #35AB66;
+        margin-right: 15px;
+    }
+}

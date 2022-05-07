@@ -1,3 +1,59 @@
 {
-  "extends": "next/core-web-vitals"
+    "extends": "next/core-web-vitals",
+    "rules": {
+        "import/no-extraneous-dependencies": 1,
+        "camelcase": [
+            "off",
+            {
+                "properties": "always"
+            }
+        ],
+        "semi": [
+            2,
+            "always"
+        ],
+        "jsx-quotes": [
+            "error",
+            "prefer-double"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "babel/object-curly-spacing": [
+            "off",
+            "always"
+        ],
+        "object-curly-spacing": [
+            "error",
+            "always"
+        ],
+        "import/order": [
+            "warn",
+            {
+                "pathGroups": [
+                    {
+                        "pattern": "@/**",
+                        "group": "external",
+                        "position": "after"
+                    }
+                ],
+                "groups": [
+                    "builtin",
+                    "external",
+                    "internal",
+                    "parent",
+                    "sibling",
+                    "index"
+                ],
+                "newlines-between": "always"
+            }
+        ]
+    },
+    "max-len": [
+        "error",
+        {
+            "code": 80
+        }
+    ]
 }
