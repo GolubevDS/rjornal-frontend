@@ -48,12 +48,12 @@
                 ],
                 "newlines-between": "always"
             }
+        ],
+        "max-len": [
+            "warn",
+            {
+                "code": 120
+            }
         ]
-    },
-    "max-len": [
-        "error",
-        {
-            "code": 80
-        }
-    ]
+    }
 }

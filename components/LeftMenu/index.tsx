@@ -26,7 +26,10 @@ export const LeftMenu = (): JSX.Element => {
                     <li key={obj.path}>
                         <Link href={obj.path}>
                             <a>
-                                <Button startIcon={obj.icon} variant={router.asPath === obj.path ? 'contained' : 'text'}>
+                                <Button
+                                    startIcon={obj.icon}
+                                    variant={router.asPath === obj.path ? 'contained' : 'text'}
+                                >
                                     {obj.text}
                                 </Button>
                             </a>

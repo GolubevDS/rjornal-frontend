@@ -1,8 +1,10 @@
+import type { NextPage } from 'next/types';
+
 import { ArticleCard } from '@/components/ArticleCard';
 import { AppLayout } from '@/layouts/AppLayout';
 
 /** Главная страница. */
-export default function Home(): JSX.Element {
+const Home: NextPage = () => {
     return (
         <AppLayout>
             <ArticleCard />
@@ -10,6 +12,8 @@ export default function Home(): JSX.Element {
             <ArticleCard />
         </AppLayout>
     );
-}
+};
 
 Home.displayName = 'pages/Home';
+
+export default Home;

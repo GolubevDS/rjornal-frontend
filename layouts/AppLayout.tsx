@@ -1,14 +1,15 @@
 import type { ReactNode } from 'react';
 
-import { LeftMenu } from '../components/LeftMenu';
-import { SideComments } from '../components/SideComments';
+import { LeftMenu } from '@/components/LeftMenu';
+import { SideComments } from '@/components/SideComments';
+import clsx from 'clsx';
 
 /**
  * Параметры лейаута приложения.
  *
- * @prop {boolean} [contentFullWidth = false] Флаг формата отображения основного контента.
+ * @prop {Boolean} [contentFullWidth = false] Флаг формата отображения основного контента.
  * @prop {ReactNode} children Дочернее содержимое компонента.
- * @prop {boolean} [hideComments = false] Флаг отображения панели комментариев.
+ * @prop {Boolean} [hideComments = false] Флаг отображения панели комментариев.
  */
 interface IProps {
     contentFullWidth?: boolean;
@@ -17,11 +18,15 @@ interface IProps {
 }
 
 /** Лейаут приложения. */
-export const AppLayout = ({ contentFullWidth = false, children, hideComments = false }: IProps): JSX.Element => {
+export const AppLayout = ({
+    contentFullWidth = false,
+    children,
+    hideComments = false
+}: IProps): JSX.Element => {
     return (
         <div className="wrapper">
             <LeftMenu />
-            <div className={contentFullWidth ? 'content--full' : 'content'}>
+            <div className={clsx('content', { 'content--full': contentFullWidth })}>
                 {children}
             </div>
             {!hideComments && <SideComments />}
