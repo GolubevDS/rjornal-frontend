@@ -1,11 +1,14 @@
 import { ThemeProvider } from '@mui/material/styles';
+import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
-import { Header } from '../components/Header';
+import { Header } from '@/components/Header';
+import { Writing } from '@/components/Writing';
+
 import '../styles/global.scss';
 import { theme } from '../styles/theme';
 
-export default function App({ Component, pageProps }): JSX.Element {
+export default function App({ Component, pageProps }: AppProps): JSX.Element {
     return (
         <ThemeProvider theme={theme}>
             <Head>
@@ -16,7 +19,8 @@ export default function App({ Component, pageProps }): JSX.Element {
                 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
             </Head>
             <Header />
+            <Writing />
             <Component {...pageProps} />
         </ThemeProvider>
     );
-}
+};

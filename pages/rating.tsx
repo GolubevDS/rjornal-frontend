@@ -1,8 +1,10 @@
+import type { NextPage } from 'next/types';
+
 import { AppLayout } from '@/layouts/AppLayout';
 import { Header, Table } from '@/widgets/Rating';
 
 /** Страница c рейтингом пользователей. */
-export default function Rating(): JSX.Element {
+const Rating: NextPage = () => {
     return (
         <AppLayout>
             <Header />
@@ -12,3 +14,5 @@ export default function Rating(): JSX.Element {
 };
 
 Rating.displayName = 'pages/Rating';
+
+export default Rating;

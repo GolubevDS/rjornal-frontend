@@ -1,0 +1,37 @@
+.writing {
+    width: 880px;
+    height: 700px;
+    padding: 24px 12px 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.fullscreen {
+    height: calc(100vh - 60px);
+}
+
+.titleField {
+    width: 100%;
+    margin-bottom: 12px;
+
+    &:before, &:after {
+        display: none !important;
+    }
+
+    input {
+        margin: 0 auto;
+        width: 650px;
+        font-size: 36px;
+        font-weight: 700;
+    }
+}
+
+.editor {
+    overflow: auto;
+    flex-grow: 1;
+}
+
+.footer {
+    margin: 24px auto 0;
+    width: 650px;
+}

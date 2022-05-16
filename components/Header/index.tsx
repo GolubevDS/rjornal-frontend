@@ -29,7 +29,7 @@ export const Header = (): JSX.Element => {
                     <input placeholder="Поиск" />
                 </div>
 
-                <Link href="/write">
+                <Link href={{ query: { writing: 0 } }} shallow={true} replace>
                     <a>
                         <Button variant="contained" className={styles.penButton}>
                             Новая запись

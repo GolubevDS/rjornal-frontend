@@ -1,10 +1,11 @@
 import { Box } from '@mui/material';
+import type { NextPage } from 'next/types';
 
 import { AppLayout } from '@/layouts/AppLayout';
 import { Content, Header, Sidebar } from '@/widgets/Profile';
 
 /** Страница профиля. */
-export default function Profile(): JSX.Element {
+const Profile: NextPage = () => {
     return (
         <AppLayout contentFullWidth hideComments>
             <Header />
@@ -17,3 +18,5 @@ export default function Profile(): JSX.Element {
 };
 
 Profile.displayName = 'pages/Profile';
+
+export default Profile;
